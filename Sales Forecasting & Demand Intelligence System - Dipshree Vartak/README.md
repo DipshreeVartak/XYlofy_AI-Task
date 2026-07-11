@@ -6,44 +6,6 @@ This repository implements the requirements for the **Final Internship Project (
 
 ---
 
-## 📂 Project Directory Structure
-
-The project has been organized into logical sub-directories to maintain modularity:
-
-```text
-├── Analysis/
-│   ├── Train.csv                     # Primary Superstore sales dataset
-│   ├── analysis.py                   # Complete data exploration and modeling pipeline
-│   ├── model_comparison.csv          # Pre-computed model errors and projections
-│   ├── detected_anomalies.csv        # Pre-computed weekly anomalies dataset
-│   └── product_segmentation.csv      # Pre-computed product clusters dataset
-│
-├── Dashboard/
-│   ├── Train.csv                     # Dataset mirror for dashboard caching
-│   ├── app.py                        # Streamlit interactive dashboard code
-│   └── requirements.txt              # Project library dependencies
-│
-├── charts/                           # 12 analytical plots (saved automatically)
-│   ├── overall_monthly_trend.png
-│   ├── sales_decomposition.png
-│   ├── monthly_sales_seasonality.png
-│   ├── sarima_forecast.png
-│   ├── prophet_forecast.png
-│   ├── prophet_components.png
-│   ├── xgboost_forecast.png
-│   ├── segment_forecasts.png
-│   ├── isolation_forest_anomalies.png
-│   ├── zscore_anomalies.png
-│   ├── kmeans_elbow.png
-│   └── kmeans_clusters.png
-│
-├── generate_report.py                # ReportLab script to generate PDF summary
-├── summary.pdf                       # Styled 2-page executive business report
-└── README.md                         # Project documentation
-```
-
----
-
 ## 🚀 Setup & Installation
 
 ### 1. Prerequisite
@@ -79,13 +41,6 @@ python analysis.py
 ```
 *Note: This script automatically downloads the secondary Video Game Sales dataset via `kagglehub`, scales and merges it under the Technology category, performs all modeling, and writes output files and plots to `/charts`.*
 
-### Compile the Executive Business Report (Task 8)
-To regenerate the beautiful 2-page PDF report (`summary.pdf`) for the CFO and Head of Supply Chain:
-```bash
-# Execute from workspace root
-python generate_report.py
-```
-
 ### Run the Streamlit Dashboard (Task 7)
 To launch the interactive dashboard locally:
 ```bash
@@ -100,7 +55,7 @@ streamlit run app.py
 
 ### **Task 1: Loading, Merging & EDA**
 * **Primary Dataset**: `Train.csv` (Superstore Sales over 4 years).
-* **Secondary Dataset**: `vgsales.csv` (Video Game Sales, merged as a subcategory under the "Technology" category to simulate multi-source inventory consolidation).
+
 * **Findings**:
   * **Top Revenue Category**: Technology ($1.16M).
   * **Most Consistent Region**: East Region (lowest YoY growth variance).
