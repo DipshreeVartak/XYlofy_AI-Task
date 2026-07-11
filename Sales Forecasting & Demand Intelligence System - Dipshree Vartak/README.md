@@ -1,4 +1,4 @@
-# DemandIntel AI: Sales Forecasting & Demand Intelligence System
+# Sales Forecasting & Demand Intelligence System
 
 An end-to-end retail and e-commerce forecasting system designed to predict product demand, detect sales anomalies, cluster products by customer demand profiles, and deliver an interactive operational dashboard.
 
